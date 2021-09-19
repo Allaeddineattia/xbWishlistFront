@@ -1,0 +1,16 @@
+.navbar {
+    background-color:#674172;
+    position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+.navbar-wrapper {
+    display:flex;
+    justify-content: space-between;
+    height:8vh;
+    width: 100vw;
+}
+.flex-item {
+
+}
+

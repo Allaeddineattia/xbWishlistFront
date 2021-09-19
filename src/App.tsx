@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import {get_games} from './services/serivce';
+import NavBar from './components/nav-bar';
+import SideBar from './components/side-bar';
+import Content from './components/content';
+import { SearchResult } from './services/search_service';
+class App extends Component {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  state = {
+    searchResult: []
+  }
+
+  render(){
+    return (
+      <div className="App">
+        <NavBar  />
+        <SideBar searchHandler={this.searchBarHandler}/>
+        <Content games={this.state.searchResult}/>
+      </div>
+    );
+  }
+  async componentDidMount() {
+    await get_games();
+  }
+  
+  searchBarHandler = async (searchResult: Array<SearchResult>) =>{
+    this.setState ({
+      searchResult
+    })
+    console.log("hehi: /n", this.state.searchResult)
+  }
+  
 }
 
 export default App;

@@ -1,0 +1,18 @@
+.sidebar {
+    width: 20vw;
+    height:92vh;
+    background-color:#87d37b;
+
+
+    float:left;
+}
+
+label {
+    display: block;
+    /*font: 1rem 'Fira Sans', sans-serif;*/
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
