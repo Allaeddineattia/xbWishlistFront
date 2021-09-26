@@ -6,11 +6,19 @@
 }
 .navbar-wrapper {
     display:flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height:8vh;
     width: 100vw;
 }
 .flex-item {
+    margin: auto 2vw;
+}
+.flex-item p {
+    color: white;
+    font-weight: bold;
+    font-size: clamp(1rem, -0.875rem + 8.333vw, 2rem);
+    /*clamp(minimum, preferred, maximum);*/
+    margin: 0;
+
 
 }
-

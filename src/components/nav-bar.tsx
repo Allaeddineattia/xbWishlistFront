@@ -5,8 +5,9 @@ class NavBar extends Component {
     render(){
       return (
         <nav className="navbar-wrapper navbar">
-          
-
+          <div className="flex-item"><p>Games</p></div>
+            <div className="flex-item"><p>Wishlist</p></div>
+            <div className="flex-item"><p>Languages</p></div>
         </nav>
       );
     }
