@@ -21,7 +21,7 @@ class App extends Component {
     );
   }
   async componentDidMount() {
-    await get_games();
+    //await get_games();
   }
   
   searchBarHandler = async (searchResult: Array<SearchResult>) =>{

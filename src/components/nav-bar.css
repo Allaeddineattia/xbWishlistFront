@@ -6,12 +6,14 @@
 	position: sticky;
 	top: 0;
 }
+
 .navbar-wrapper {
     display:flex;
     justify-content: space-between;
     height:8vh;
     width: 100vw;
 }
+
 .navbar-item {
     margin: 2vh;
     color: white;
@@ -20,9 +22,11 @@
     /*clamp(minimum, preferred, maximum);*/
 
 }
+
 .flex-item {
     margin: auto 2vw;
 }
+
 .third-button {
     background-color: inherit;
     border: none;
