@@ -19,9 +19,22 @@
     color: white;
     font-weight: bold;
     font-size: clamp(1rem, -0.875rem + 8.333vw, 2rem);
+    text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+    transition: text-decoration-color 1000ms;
+    text-underline-offset: 0.3em;
     /*clamp(minimum, preferred, maximum);*/
 
 }
+
+
+.navbar-item:hover{
+    cursor: pointer;
+    text-decoration-color: rgb(255, 255, 255);
+    text-underline-offset: 0.3em;
+}
+
+
+
 
 .flex-item {
     margin: auto 2vw;

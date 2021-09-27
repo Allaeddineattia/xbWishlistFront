@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './nav-bar.css' ;
-
-class NavBar extends Component {
+import * as service from '../services/wishlist_service'
+import {Modes} from '../shared';
+class NavBar extends Component<{modeHandler: any}> {
     render(){
       return (
         <nav className="navbar-wrapper navbar">
@@ -16,9 +17,9 @@ class NavBar extends Component {
                 </button>
             </div>
             <div className="flex-item">
-                <span className="navbar-item">Games</span>
-                <span className="navbar-item">Wishlist</span>
-                <span className="navbar-item">Languages</span>
+                <span className="navbar-item" onClick={this.handleGamesClick}>Games</span>
+                <span className="navbar-item" onClick={this.handleWishlistClick} id="wishlist">Wishlist</span>
+                <span className="navbar-item" >Languages</span>
             </div>
 
 
@@ -28,7 +29,14 @@ class NavBar extends Component {
     async componentDidMount() {
       //await get_games();
     }
-    
+    handleWishlistClick = async () => {
+      service.get_all_wishlists()
+      this.props.modeHandler(Modes.Wishlist)
+    }
+
+    handleGamesClick = async () => {
+      this.props.modeHandler(Modes.Games)
+    }
     
 }
 
