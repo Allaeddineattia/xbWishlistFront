@@ -1,18 +1,27 @@
 .sidebar {
-    width: 20%;
+    width: 15%;
     height:92vh;
-    background-color:#87d37b;
-
-
+    box-sizing: border-box;    
+    /*border-right: 3px solid #565656;*/
+    /*background-image: url("../assets/side-bar-background.jpeg");*/
     float:left;
+    background-color: #e9e9e9;
 }
+
 
 label {
     display: block;
     /*font: 1rem 'Fira Sans', sans-serif;*/
 }
 
-input,
-label {
+input,label {
     margin: .4rem 0;
 }
+
+.menu-entry {
+    color : #28282B;
+    vertical-align: middle;
+    text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+    transition: text-decoration-color 1000ms;
+    text-underline-offset: 0.3em;
+} 

@@ -3,16 +3,19 @@ import './App.css';
 import NavBar from './components/nav-bar';
 import SideBar from './components/side-bar';
 import Content from './components/content';
+import {WishlistInfoElement} from './services/wishlist_service';
 import { SearchResult } from './services/search_service';
 import {Modes} from './shared';
 import * as wishlistService from './services/wishlist_service'
+import WishlistContent from './components/wishlist_content';
 class App extends Component {
 
   state = {
     searchResult: [],
     mode: Modes.Games, 
     displaySideBar: true,
-    wishlists: []
+    wishlists: [],
+    selectedWishlist: null,
   }
 
   render(){
@@ -54,15 +57,26 @@ class App extends Component {
     if (this.state.mode == Modes.Games){
       return <Content games={this.state.searchResult}/>
     }else if (this.state.mode == Modes.Wishlist){
-      return <div> 
-          heeehi 
-        </div>;
+      if (this.state.selectedWishlist){
+        let wishlist: wishlistService.Wishlist = this.state.selectedWishlist;
+        return <WishlistContent wishlist={ wishlist}/> 
+      }
     }
   }
 
   sidebar(){
     if(this.state.displaySideBar){
-      return <SideBar searchHandler={this.searchBarHandler} mode={this.state.mode} wishlists={this.state.wishlists}/>
+      return <SideBar wishlist_selector_handler={this.selectWishlistHandler} searchHandler={this.searchBarHandler} mode={this.state.mode} wishlists={this.state.wishlists}/>
+    }
+  }
+
+  selectWishlistHandler = (wishlistName: string) => {
+    let filtred = this.state.wishlists.filter((wishlist: wishlistService.Wishlist) => wishlist.Name === wishlistName );
+    if (filtred.length === 1){
+      let wishlist: wishlistService.Wishlist = filtred[0];
+      this.setState({
+        selectedWishlist: wishlist
+      })
     }
   }
   

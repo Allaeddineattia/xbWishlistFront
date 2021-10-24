@@ -1,7 +1,6 @@
 .navbar {
     background-color: #6247aa;
     background-image: linear-gradient(360deg, #674172 26%, #6247aa 93%);
-
     position: -webkit-sticky;
 	position: sticky;
 	top: 0;
