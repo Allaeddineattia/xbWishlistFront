@@ -23,7 +23,6 @@
     transition: text-decoration-color 1000ms;
     text-underline-offset: 0.3em;
     /*clamp(minimum, preferred, maximum);*/
-
 }
 
 
@@ -32,9 +31,6 @@
     text-decoration-color: rgb(255, 255, 255);
     text-underline-offset: 0.3em;
 }
-
-
-
 
 .flex-item {
     margin: auto 2vw;
@@ -129,3 +125,11 @@
     top: 21px;
     left: 8px;
 }
+
+@media only screen and (orientation: landscape) {
+    .navbar-item {
+        font-size: clamp(1rem, -0.875rem + 8vh, 2rem);
+
+    }
+}
+
