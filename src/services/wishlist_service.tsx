@@ -2,15 +2,15 @@ import axios from "axios";
 import {SearchResult} from "./search_service"
 
 export interface Wishlist{
-    Name: string,//Name
-    Games: Array<WishlistInfoElement>,//Game
-    Language: string,//Language
-    Markets: Array<string>,//Markets
+    Name: string, //Name
+    Games: Array<WishlistInfoElement>, //Game
+    Language: string, //Language
+    Markets: Array<string>, //Markets
 }
 
 export interface WishlistInfoElement{
-    Game: SearchResult,//Game
-    Markets: Array<string>,//Markets
+    Game: SearchResult, //Game
+    Markets: Array<string>, //Markets
 }
 
 const client = axios.create({

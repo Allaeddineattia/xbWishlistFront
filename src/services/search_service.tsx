@@ -30,7 +30,7 @@ export interface SearchResult{
 }
 
 interface PurchaseOption{
-    Markets: string
+    Market: string
     StoreURL: string
     Availabilities: Array<Availability>
 }
