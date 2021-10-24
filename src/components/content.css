@@ -1,5 +1,5 @@
 .content {
-    width:80%;
+    width:85%;
     height:92vh;
     /* background-color:#e8e4c9; */
     background-image: url("../assets/content-background.jpeg");
@@ -7,4 +7,5 @@
     background-size: cover;
     object-fit: cover;
     float:right;
+    overflow-x: hidden;
 }    
