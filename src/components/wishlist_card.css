@@ -1,26 +1,25 @@
-.Card{
-    height: 40vh;
-    width:22.5vh;   
-    display: inline-block;
+.card-container {
+    display: flex;
+    justify-content: space-between
+}
+.wish-list-card{
+    height: 24vh;
+    background-color: blue;
     margin: 1rem;
+
+}
+
+.wish-list-card img{
+    max-height: 20vh;
+    margin-left: 1vw;
+    margin-top: 2vh;
+}
+
+.wish-list-card{
     background: rgba(255, 255, 255, 0.53);
     border-radius: 2vh;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.CardName{
-    height: 30%;
-}
-  
-/* From https://css.glass */
-
- 
-.Card img {
-    max-width: 90%;
-
-    margin-top: 5%;
-    
 }

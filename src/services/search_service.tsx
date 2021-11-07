@@ -29,13 +29,13 @@ export interface SearchResult{
 
 }
 
-interface PurchaseOption{
+export interface PurchaseOption{
     Market: string
     StoreURL: string
     Availabilities: Array<Availability>
 }
 
-interface Availability{
+export interface Availability{
     SaleState: string;
     OriginalPrice: number;
     SalePrice: number;

@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import {Wishlist, WishlistInfoElement} from '../services/wishlist_service';
 import WishlistCard from './wishlist_card';
+import "./wishlist_content.css";
 
 interface Props{
     wishlist: Wishlist
@@ -9,7 +10,7 @@ interface Props{
 class WishlistContent extends Component<Props>{
     render (){
         console.log("WishlistContent wishlist " , this.props.wishlist)
-        return <div>
+        return <div className="wishlist-content">
             {this.props.wishlist.Games.map((game: WishlistInfoElement) =>{
              return <WishlistCard game={game}/>
           })}
